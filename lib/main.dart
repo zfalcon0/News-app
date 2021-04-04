@@ -30,6 +30,7 @@ class ListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
         TitleWithMoreButton(
           title: "News",

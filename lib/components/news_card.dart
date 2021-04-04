@@ -20,12 +20,11 @@ class NewsCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         left: kDefaultPadding,
-        top: kDefaultPadding / 2,
-        bottom: kDefaultPadding * 2.5,
+        top: kDefaultPadding,
+        bottom: kDefaultPadding,
       ),
-      width: size.width * 0.4,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      width: size.width,
+      child: Row(
         children: <Widget>[
           GestureDetector(
             onTap: press,
@@ -60,8 +59,7 @@ class NewsCard extends StatelessWidget {
                     color: kPrimaryColor.withOpacity(0.23)),
               ],
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Row(
               children: <Widget>[
                 RichText(
                   text: TextSpan(
