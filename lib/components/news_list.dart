@@ -13,30 +13,32 @@ class NewsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           NewsCard(
             image: "assets/images/news.jpg",
-            title: "Addis Abeba",
-            price: 500,
+            title: "News 1",
+            description: "News 1 description",
             press: () {},
           ),
           NewsCard(
             image: "assets/images/news2.jpg",
-            title: "Bahrdar",
-            price: 300,
+            title: "News 2 ",
+            description: "News 2 description",
             press: () {},
           ),
           NewsCard(
             image: "assets/images/news.jpg",
-            title: "Gonder",
-            price: 550,
+            title: "News 3 ",
+            description: "News 3 description",
             press: () {},
           ),
           NewsCard(
             image: "assets/images/news2.jpg",
-            title: "Mekele",
-            price: 700,
+            title: "news 4",
+            description: "News 4 description",
             press: () {},
           ),
         ],

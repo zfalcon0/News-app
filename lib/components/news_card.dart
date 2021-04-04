@@ -7,11 +7,11 @@ import '../constants.dart';
 
 class NewsCard extends StatelessWidget {
   const NewsCard({
-    Key key, this.image, this.title, this.price, this.press,
+    Key key, this.image, this.title, this.description, this.press,
   }) : super(key: key);
 
   final String image, title;
-  final int price;
+  final String description;
   final Function press;
 
   @override
@@ -25,6 +25,7 @@ class NewsCard extends StatelessWidget {
       ),
       width: size.width * 0.4,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           GestureDetector(
             onTap: press,
@@ -45,7 +46,7 @@ class NewsCard extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(kDefaultPadding / 2),
+            padding: EdgeInsets.all(kDefaultPadding),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -59,7 +60,8 @@ class NewsCard extends StatelessWidget {
                     color: kPrimaryColor.withOpacity(0.23)),
               ],
             ),
-            child: Row(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 RichText(
                   text: TextSpan(
@@ -69,7 +71,7 @@ class NewsCard extends StatelessWidget {
                         style: Theme.of(context).textTheme.button,
                       ),
                       TextSpan(
-                        text: "$price birr",
+                        text: "$description ...",
                         style: TextStyle(
                           color: kTextColor ,
                         ),
